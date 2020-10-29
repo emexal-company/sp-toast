@@ -8,6 +8,7 @@ export declare class Toast extends Base {
     negative: boolean;
     positive: boolean;
     protected render(): import("lit-element").TemplateResult;
+    protected handleClose(): void;
 }
 declare global {
     interface HTMLElementTagNameMap {

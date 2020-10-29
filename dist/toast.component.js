@@ -1,9 +1,9 @@
 import { __decorate, __metadata } from "tslib";
 import { customElement, property } from 'lit-element';
 import { Base } from '@spectrum/sp-base';
+import { Button } from '@spectrum/sp-button';
 import toastStyles from './toast.styles';
 import template from './toast.template';
-import { Button } from '@spectrum/sp-button';
 let Toast = class Toast extends Base {
     constructor() {
         super(...arguments);
@@ -16,6 +16,13 @@ let Toast = class Toast extends Base {
     }
     render() {
         return template.call(this);
+    }
+    handleClose() {
+        const disposeEvent = new CustomEvent('dispose', {
+            bubbles: true,
+            composed: true,
+        });
+        this.dispatchEvent(disposeEvent);
     }
 };
 Toast.componentStyles = Button.componentStyles.concat(toastStyles);

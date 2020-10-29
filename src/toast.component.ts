@@ -1,9 +1,10 @@
 import { customElement, property } from 'lit-element';
+
 import { Base } from '@spectrum/sp-base';
+import { Button } from '@spectrum/sp-button';
+
 import toastStyles from './toast.styles';
 import template from './toast.template';
-
-import { Button } from '@spectrum/sp-button';
 
 @customElement('sp-toast')
 export class Toast extends Base {
@@ -19,6 +20,15 @@ export class Toast extends Base {
   protected render() {
     return template.call(this);
   }
+
+  protected handleClose() {
+    const disposeEvent = new CustomEvent('dispose', {
+      bubbles: true,
+      composed: true,
+    });
+    this.dispatchEvent(disposeEvent);
+  }
+
 }
 
 declare global {

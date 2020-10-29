@@ -38,7 +38,7 @@ export default function template(this: Toast) {
                 <slot name="button" style="float: right; margin-right: var(--spectrum-global-dimension-size-130);" ></slot>
             </div>
             <div class="spectrum-Toast-buttons">
-                <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
+                <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground" @click="${this.handleClose}">
                     <sp-icon name="CrossSmall"></sp-icon>
                 </button>
             </div>
