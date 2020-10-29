@@ -3,6 +3,7 @@ import { DemoToast } from './demo-toast.component';
 
 import '@spectrum/sp-toast';
 import '@spectrum/sp-container';
+import '@spectrum/sp-button';
 
 
 export default function template(this: DemoToast) {
@@ -10,7 +11,9 @@ export default function template(this: DemoToast) {
   <sp-container>
       <sp-rule medium label="Toast - Standard"></sp-rule>
       <sp-demo width="400">
-        <pre><sp-toast width="400" content="Content of toast" label="Undo"></sp-toast></pre>
+        <pre><sp-toast content="Content of toast">
+          <sp-button slot="button" quiet type="over-background" label="Undo"></sp-button>
+        </sp-toast></pre>
       </sp-demo>
       <sp-rule medium label="Toast - Info"></sp-rule>
       <sp-demo width="400">

@@ -130,3 +130,7 @@
 .spectrum-Toast--success .spectrum-Toast-closeButton.focus-ring:not(:active) {
     color: var(--spectrum-toast-positive-background-color, var(--spectrum-global-color-static-green-700));
 }
+
+:host {
+    display: inline-block;
+}

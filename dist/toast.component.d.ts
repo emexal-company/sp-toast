@@ -1,6 +1,6 @@
 import { Base } from '@spectrum/sp-base';
 export declare class Toast extends Base {
-    static componentStyles: (import("lit-element").CSSResult | import("lit-element").CSSResult[])[];
+    static componentStyles: import("lit-element").CSSResult[];
     width: string;
     label: string;
     content: string;

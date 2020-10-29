@@ -13,7 +13,7 @@ export default function template(this: Toast) {
         'spectrum-Toast--positive': this.positive,
     };
 
-    let iconTemplate = [];
+    const iconTemplate = [];
 
     if (this.info) {
         iconTemplate.push(html`
@@ -30,18 +30,18 @@ export default function template(this: Toast) {
     }
 
     return html`
-    <div class="spectrum-Toast ${classMap(classes)}" style="width: ${this.width}px">
-        ${iconTemplate}
-        <div class="spectrum-Toast-body">
-            <div class="spectrum-Toast-content">${this.content}</div>
-            <button class="spectrum-Button spectrum-Button--overBackground spectrum-Button--quiet">
-            <span class="spectrum-Button-label">${this.label}</span>
-            </button>
-        </div>
-        <div class="spectrum-Toast-buttons">
-            <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
-                <sp-icon name="CrossSmall"></sp-icon>
-            </button>
+    <div style="width: 100%;">
+        <div class="spectrum-Toast ${classMap(classes)}" style="width: 100%;">
+            ${iconTemplate}
+            <div class="spectrum-Toast-body">
+                <div class="spectrum-Toast-content">${this.content}</div>
+                <slot name="button" style="float: right; margin-right: var(--spectrum-global-dimension-size-130);" ></slot>
+            </div>
+            <div class="spectrum-Toast-buttons">
+                <button class="spectrum-ClearButton spectrum-ClearButton--medium spectrum-ClearButton--overBackground">
+                    <sp-icon name="CrossSmall"></sp-icon>
+                </button>
+            </div>
         </div>
     </div>
     `;

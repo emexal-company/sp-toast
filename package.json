@@ -5,10 +5,10 @@
   "main": "dist/toast.component.js",
   "module": "dist/toast.component.js",
   "dependencies": {
-    "@spectrum/sp-base": "file:../base",
-    "@spectrum/sp-config": "file:../config",
-    "@spectrum/sp-icon": "file:../icon",
-    "@spectrum/sp-button": "file:../button",
+    "@spectrum/sp-base": "git+https://github.com/emexal-company/sp-base.git",
+    "@spectrum/sp-config": "git+https://github.com/emexal-company/sp-config.git",
+    "@spectrum/sp-icon": "git+https://github.com/emexal-company/sp-icon.git",
+    "@spectrum/sp-button": "git+https://github.com/emexal-company/sp-button.git",
     "lit-element": "^2.4.0",
     "tslib": "^2.0.1"
   },
@@ -21,6 +21,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Omar BELKHODJA",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
 }

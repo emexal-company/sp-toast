@@ -7,14 +7,14 @@ import { Button } from '@spectrum/sp-button';
 
 @customElement('sp-toast')
 export class Toast extends Base {
-  public static componentStyles = [ Button.componentStyles, toastStyles ];
+  public static componentStyles = Button.componentStyles.concat(toastStyles);
 
-  @property({ type: String }) width = "";
-  @property({ type: String }) label = "";
-  @property({ type: String }) content = "";
-  @property({ type: Boolean }) info = false;
-  @property({ type: Boolean }) negative = false;
-  @property({ type: Boolean }) positive = false;
+  @property({ type: String }) public width = '';
+  @property({ type: String }) public label = '';
+  @property({ type: String }) public content = '';
+  @property({ type: Boolean }) public info = false;
+  @property({ type: Boolean }) public negative = false;
+  @property({ type: Boolean }) public positive = false;
 
   protected render() {
     return template.call(this);

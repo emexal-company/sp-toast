@@ -7,9 +7,9 @@ import { Button } from '@spectrum/sp-button';
 let Toast = class Toast extends Base {
     constructor() {
         super(...arguments);
-        this.width = "";
-        this.label = "";
-        this.content = "";
+        this.width = '';
+        this.label = '';
+        this.content = '';
         this.info = false;
         this.negative = false;
         this.positive = false;
@@ -18,7 +18,7 @@ let Toast = class Toast extends Base {
         return template.call(this);
     }
 };
-Toast.componentStyles = [Button.componentStyles, toastStyles];
+Toast.componentStyles = Button.componentStyles.concat(toastStyles);
 __decorate([
     property({ type: String }),
     __metadata("design:type", Object)
